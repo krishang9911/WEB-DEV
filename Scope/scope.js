@@ -13,7 +13,7 @@
 
 // 1) Global scope:
 //    Variables declared outside all the functions or blocks are in global scope
-//    Accessible anywhere in the program
+//    Accessible everywhere in the program
 //    Exist for the entire lifetime of the program
 
 //    var, let and const 
@@ -27,11 +27,11 @@ test();
 // since x is a global variable, it can be accessed inside the test() function
 
 // 2) Function scope:
-//    Variables declared inside a function are accessible only within that function
+//    Variables declared inside a function, are accessible only within that function
 //    Exist only during the execution and destroyed after execution
 
 function demo(){
-    var x = 10;
+    var x = 10;      
     let y = 20;
     const z = 13;
     console.log(x, y, z);
@@ -79,3 +79,5 @@ outer();
 // why 10 not 20?
 // BECAUSE OF LEXICAL SCOPE which says that
 //   A FUNCTION USES VARIABLES FROM THE SCOPE WHERE IT IS DEFINED, NOT FROM WHERE IT IS CALLED 
+
+// JS has lexical scope not dynamic scope
