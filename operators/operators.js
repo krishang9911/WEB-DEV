@@ -34,7 +34,7 @@ console.log(0===1);  // false
 // 4) Logical operators
 //  a) Logical AND (&&)  b) Logical OR (||)  c) Logical NOT (!)
 // a) Logical AND
-//    Return true if both the conditions are true
+//    Returns true if both the conditions are true
 console.log(true && true);  // true
 
 // b) Logical OR
@@ -112,14 +112,14 @@ let m = 10;
 let n = --m;
 
 console.log(m); // 10
-console.log(n); // 10
+console.log(n); // 9
 
 // c) typeof
 //    returns the data type of its operand as a string
 
 console.log(typeof null)  // 'object'
 console.log(typeof 1) // 'number'
-console.log(type [2]); // 'object'
+console.log(typeof [2]); // 'object'
 
 // 7) String operators
 //  Used to work with strings
@@ -128,5 +128,34 @@ console.log(type [2]); // 'object'
 console.log("3"+ "2");  // 32
 
 // b) += (Append)
-let firstName = "Virat";
-let fullName = firstName + "Kohli";
+athleteName = "Virat"
+athleteName += "Kohli";
+
+// 8) Nullish coalescing
+//  Returns its right-hand side operand when its right-hand side operand
+//  either null or undefined 
+//  Otherwise, returns its left hand side operand
+
+// Safer way  to assign default values compared to the logical OR(||)
+// operator, which can behave unexpectedly with falsy values like 0, null, NaN
+
+let score = 0;
+
+// using logical OR(the old way)
+let finalScoreOR = score || 10;
+// Result: 10 (Incorrect!  as 0 is a valid score. But, the logical OR(||) is
+//  treating it as a falsy value
+
+// using Nullish coalescing
+let finalScoreNullish = score ?? 10;
+// Result: 0 (Correct! It recognizes 0 as a defined value)
+
+let userInput = "";
+
+let displayName = userInput ?? "Guest";
+// Result: The empty string is preserved because it is not null or undefined
+
+let databaseValue = null;
+let finalName = databaseValue ?? "Anonymous"
+// result: 'Anonymous'
+
