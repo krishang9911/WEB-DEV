@@ -171,7 +171,7 @@ let finalName = databaseValue ?? "Anonymous"
 
 //   Result: 1
 
-// 2) Bitwise OR
+//   b) Bitwise OR
 //     Bit is 1 if any bit is 1
 
 //   console.log(5 & 3)   output: 7
@@ -180,8 +180,8 @@ let finalName = databaseValue ?? "Anonymous"
 //    5 & 3 -> 0111
 //   Final result:  7
 
-//  3) XOR
-//    Bit is 1 if bits dffer
+//     c) XOR
+//    Bit is 1 if bits differ
 
 //    5 ^ 3
 //    5 -> 0101   3 -> 0011;
