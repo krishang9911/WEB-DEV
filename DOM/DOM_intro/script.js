@@ -3,19 +3,19 @@
 // So, first of all, what is DOM?
 //  DOM stands for Document Object Model.
 //  It has a tree-like structure
-//  created by the browser from our HTML page
-//   WHAT DOES IT DO? It represents everything on the wbpage
+//  created by the browser from the HTML Document
+//   WHAT DOES IT DO? It represents everything on the webpage
 //    as an object that JavaScript can modify and control
 
 //  Basically, when the browser loads our HTML:
 //   It reads the HTML text
-//   converts it into a tree of objetcs
+//   converts it into a tree of objects
 //   Stores this structure in memory
 //      We can modify this structure using JavaScript to add
 //      dynamic changes to the webpage
 
 // DOM traversal 
-//  Refers to the process of navigating throught the DOM tree
+//  Refers to the process of navigating through the DOM tree
 //  to access different nodes(element, text or attribute) based on
 //  their relationships: parent, child and sibling
 
@@ -32,9 +32,15 @@ const paraElement = document.getElementById("para");
 console.log(paraElement);
 
 // getElementsByClassName()
-//  Selects multiple elements sharing the same class name
+//  Selects multiple elements based on their class name
 //  Returns an HTMLCollection(array-like but not an actual array)
 
 const collection = document.getElementsByClassName("sub-heading");
 console.log(collection);
 
+// getElementsByTagName()
+//  Selects multiple elements based on their tag name
+//  RETURNS an HTMLCollection(array-like but not an actual array)
+
+const collection2 = document.getElementsByTagName("p");
+console.log(collection2);
