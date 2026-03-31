@@ -1,3 +1,42 @@
+// Callback Hell
+//  In asynchronous JavaScript Programming, callbacks are often
+//   nested inside one another to perform asynchronous operations
+//    sequentially.
+//  Problem: This leads to a CALLBACK HELL, where the code is
+//            difficult to read, maintain and debug
+
+//  ALSO CALLED THE PYRAMID OF DOOM
+
+function task1(callback){
+    console.log("Task 1 completed");
+    callback()
+}
+
+function task2(callback){
+    console.log("Task 2 completed");
+    callback()
+}
+
+function task3(callback){
+    console.log("Task 3 completed");
+    callback();
+}
+
+function finalTas(){
+    console.log("final task also completed");
+}
+
+task1(function(){
+    task2(function(){
+        task3(function(){
+            finalTask();
+        });
+    });
+});
+
+// A promise is used to solve this problem
+//  The problem of callback hell
+
 // A promise is a JavaScript object that represents the eventual completion or
 // failure of an asynchronous operation and its resulting value
 
@@ -24,7 +63,7 @@ let promise = new Promise(function(resolve, reject){
     }
 })
 
-// Promise consumer methods
+// Promise consumer met completedhods
 //  These are the methods that are used the handle the result 
 //  after a promise is completed
 
