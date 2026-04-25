@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript events demo</h2>
+    <button id="btn">Click Me</button>
+    <br><br>
+    <input type="text" id="inputBox" placeholder="Type something">
+    <p id="output"></p>
+
+    <script src="./index.html">
+        const button = document.getElementById("btn");
+        button.addEventListener("Click", function(event){
+            console.log("button clicked");
+            console.log("event type", event.type)
+
+            // accessing value using event object
+            console.log("Typed value:", event.target.value);
+
+            // visual display
+            document.getElementById("output").textContent = "Button clicked";
+
+            // Input event
+            inputBox = document.getElementById("inputBox")
+            inputBox.addEventListener("input", function(event){
+                console.log("content being given to input receiving lcd")
+                console.log("input value", event.target.value)
+                inputBox.textContent = "You typed.." + event.target.value;
+            })
+
+        })
+    </script>
+    
+</body>
+</html>
